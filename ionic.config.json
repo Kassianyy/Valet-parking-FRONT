@@ -1,0 +1,7 @@
+{
+  "name": "valetParking",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
