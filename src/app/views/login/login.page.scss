@@ -1,0 +1,101 @@
+/* ====== ESTILOS DEL HEADER ====== */
+.custom-header {
+    background:#e5b87d;
+    border-bottom-right-radius: 80px; /* Esquina redondeada más pronunciada */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 160px;
+   
+}
+h1 {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 2px;
+    padding: 10px;
+
+}
+.logop{
+    background-color: rgb(247, 226, 194);
+    margin: 10px;
+    border-radius: 30px;
+    align-items:end;
+    padding: 5px;
+
+}
+
+
+  /* === CONTENEDOR PRINCIPAL ====== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #111; /* Fondo oscuro */
+    padding-top: 20px;
+}
+  /* ====== FORMULARIO ====== */
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: #111;
+}
+  /* ====== ETIQUETAS DE LOS CAMPOS ====== */
+.label {
+    display: block;
+    color: #e5b87d;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  /* ====== CAMPOS DE ENTRADA ====== */
+.input {
+    --background: white;
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --border-radius: 10px;
+    --placeholder-color: gray;
+    margin-bottom: 15px;
+    height: 45px;
+}
+
+  /* ====== ENLACE PARA OLVIDAR CONTRASEÑA ====== */
+.forgot-password {
+    color: #e5b87d;
+    text-align: right;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  /* ====== BOTÓN DE INICIO DE SESIÓN ====== */
+  .login-button {
+    width: 100%;
+    background: linear-gradient(to right, #d4a256, #e5b87d);
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background: linear-gradient(to right, #e5b87d, #d4a256);
+    transform: scale(1.05);
+}
+  /* ====== ENLACE DE REGISTRO ====== */
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #e5b87d;
+}
+.register-link a {
+    color: #e5b87d;
+    font-weight: bold;
+    text-decoration: none;
+}

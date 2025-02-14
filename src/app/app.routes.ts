@@ -7,9 +7,9 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'folder/:id',
+    path: 'login',
     loadComponent: () =>
-      import('./folder/folder.page').then((m) => m.FolderPage),
+      import('./views/login/login.page').then((m) => m.LoginPage),
   },
   {
     path: 'login',
