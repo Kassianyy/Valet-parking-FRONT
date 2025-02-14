@@ -12,8 +12,8 @@ export const routes: Routes = [
       import('./views/login/login.page').then((m) => m.LoginPage),
   },
   {
-    path: 'login',
-    loadComponent: () => import('./views/login/login.page').then( m => m.LoginPage)
+    path: 'signup',
+    loadComponent: () => import('./views/sign-up/sign-up.page').then( m => m.SignUpPage)
   },
   {
     path: 'sign-up',
