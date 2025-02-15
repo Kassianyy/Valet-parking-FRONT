@@ -1,13 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>SignUp</ion-title>
-  </ion-toolbar>
+<ion-header class="custom-header">
+  <h1>BIENVENIDO</h1>
+  <ion-img class="logop" src="/assets/icon/logo.png.png" alt="logo empresa"></ion-img>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Registrarse</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="register-container">
+  <div class="register-form">
+    <!-- Nombre Completo -->
+    <ion-label class="label">Nombre Completo</ion-label>
+    <ion-input class="input" type="text" placeholder="Ej: Juan Pérez"></ion-input>
+
+    <!-- Número de Documento -->
+    <ion-label class="label">Número de Documento</ion-label>
+    <ion-input class="input" type="number" placeholder="Ej: 12345678"></ion-input>
+
+    <!-- Correo Electrónico -->
+    <ion-label class="label">Correo Electrónico</ion-label>
+    <ion-input class="input" type="email" placeholder="Ej: usuario@example.com"></ion-input>
+
+    <!-- Contraseña -->
+    <ion-label class="label">Contraseña</ion-label>
+    <ion-input class="input" type="password" placeholder="********"></ion-input>
+
+    <!-- Confirmar Contraseña -->
+    <ion-label class="label">Confirmar Contraseña</ion-label>
+    <ion-input class="input" type="password" placeholder="********"></ion-input>
+
+    <!-- Botón de Registro -->
+    <button class="register-button">REGISTRARME</button>
+
+    <!-- Enlace para iniciar sesión -->
+    <div class="login-link">
+      <span>¿Ya tienes cuenta? <a href="login">Inicia Sesión</a></span>
+    </div>
+  </div>
 </ion-content>
