@@ -1,0 +1,29 @@
+<ion-header class="custom-modal-header">
+  <ion-toolbar>
+    <ion-title>Registro Exitoso</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-modal-content">
+  <div class="modal-icon-container">
+    <ion-icon name="checkmark-outline" class="success-icon"></ion-icon>
+  </div>
+
+  <h2 class="modal-title">¡Bienvenido, {{ userData.nombres }}!</h2>
+  <p class="modal-text">Tu cuenta ha sido creada con éxito.</p>
+
+  <div class="modal-info">
+    <p><strong>Nombre:</strong> {{ userData.nombres }} {{ userData.apellidos
+      }}</p>
+    <p><strong>Usuario:</strong> {{ userData.username }}</p>
+    <p><strong>Correo:</strong> {{ userData.correo }}</p>
+  </div>
+
+  <ion-button expand="full" fill="clear" class="custom-button"
+    (click)="closeModal()">Aceptar</ion-button>
+</ion-content>

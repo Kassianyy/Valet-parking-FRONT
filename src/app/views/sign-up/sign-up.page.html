@@ -1,32 +1,47 @@
+
 <ion-header class="custom-header">
+  <ion-buttons  slot="start">
+    <ion-menu-button class="buttonColor"></ion-menu-button>
+  </ion-buttons>
   <h1>BIENVENIDO</h1>
-  <ion-img class="logop" src="/assets/icon/logo.png.png" alt="logo empresa"></ion-img>
+  <ion-img class="logop" src="/assets/icon/logo.png.png"
+    alt="logo empresa"></ion-img>
 </ion-header>
 
 <ion-content class="register-container">
   <div class="register-form">
     <!-- Nombre Completo -->
-    <ion-label class="label">Nombre Completo</ion-label>
-    <ion-input class="input" type="text" placeholder="Ej: Juan Pérez"></ion-input>
+    <ion-label class="label">Nombres</ion-label>
+    <ion-input class="input" type="text" placeholder="Ej: Juan Carlos"
+      [(ngModel)]="formData.nombres"></ion-input>
+
+    <!-- Apellidos -->
+    <ion-label class="label">Apellidos</ion-label>
+    <ion-input class="input" type="text" placeholder="Ej: Martinez Olaya"
+      [(ngModel)]="formData.apellidos"></ion-input>
 
     <!-- Número de Documento -->
     <ion-label class="label">Número de Documento</ion-label>
-    <ion-input class="input" type="number" placeholder="Ej: 12345678"></ion-input>
+    <ion-input class="input" type="number" placeholder="Ej: 12345678"
+      [(ngModel)]="formData.numero_identificacion"></ion-input>
 
     <!-- Correo Electrónico -->
     <ion-label class="label">Correo Electrónico</ion-label>
-    <ion-input class="input" type="email" placeholder="Ej: usuario@example.com"></ion-input>
+    <ion-input class="input" type="email" placeholder="Ej: usuario@example.com"
+      [(ngModel)]="formData.correo"></ion-input>
 
     <!-- Contraseña -->
     <ion-label class="label">Contraseña</ion-label>
-    <ion-input class="input" type="password" placeholder="********"></ion-input>
+    <ion-input class="input" type="password" placeholder="********"
+      [(ngModel)]="formData.password"></ion-input>
 
     <!-- Confirmar Contraseña -->
     <ion-label class="label">Confirmar Contraseña</ion-label>
-    <ion-input class="input" type="password" placeholder="********"></ion-input>
+    <ion-input class="input" type="password" placeholder="********"
+      [(ngModel)]="formData.password2"></ion-input>
 
     <!-- Botón de Registro -->
-    <button class="register-button">REGISTRARME</button>
+    <button class="register-button" (click)="register()">REGISTRARME</button>
 
     <!-- Enlace para iniciar sesión -->
     <div class="login-link">

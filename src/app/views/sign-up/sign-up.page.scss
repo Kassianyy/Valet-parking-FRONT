@@ -1,98 +1,122 @@
 /* ====== ESTILOS DEL HEADER ====== */
 .custom-header {
-    background: #e5b87d;
-    border-bottom-right-radius: 80px; /* Esquina redondeada */
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    height: 160px;
-  }
-  
-  h1 {
-    color: black;
-    font-weight: bold;
-    font-size: 30px;
-    margin: 2px;
-    padding: 10px;
-  }
-  
-  .logop {
-    background-color: rgb(247, 226, 194);
-    margin: 10px;
-    border-radius: 30px;
-    padding: 5px;
-  }
-  
-  /* ====== CONTENEDOR PRINCIPAL ====== */
-  .register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #111; /* Fondo oscuro */
-    padding-top: 20px;
-  }
-  
-  /* ====== FORMULARIO ====== */
-  .register-form {
-    width: 100%;
-    max-width: 400px;
-    padding: 30px;
-    background: #111;
-  }
-  
-  /* ====== ETIQUETAS DE LOS CAMPOS ====== */
-  .label {
-    display: block;
-    color: #e5b87d;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #e5b87d !important; /* Forzar color */
-  }
-  
-  /* ====== CAMPOS DE ENTRADA ====== */
-  .input {
-    --color: black !important;  /* Hace que el texto ingresado sea negro */
-    --background: white;
-    --padding-start: 10px;
-    --padding-end: 10px;
-    --border-radius: 10px;
-    --placeholder-color: gray;
-    margin-bottom: 15px;
-    height: 45px;
-  }
-  
-  /* ====== BOTÓN DE REGISTRO ====== */
-  .register-button {
-    width: 100%;
-    background: linear-gradient(to right, #d4a256, #e5b87d);
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 12px;
-    border-radius: 25px;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: 0.3s;
-  }
-  
-  .register-button:hover {
-    background: linear-gradient(to right, #e5b87d, #d4a256);
-    transform: scale(1.05);
-  }
-  
-  /* ====== ENLACE DE INICIO DE SESIÓN ====== */
-  .login-link {
-    text-align: center;
-    margin-top: 20px;
-    color: #e5b87d;
-  }
-  
-  .login-link a {
-    color: #e5b87d;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
+  background: #e5b87d;
+  border-bottom-right-radius: 80px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribuye el espacio */
+  height: 160px;
+}
+
+.buttonColor{
+  color: black;
+}
+
+h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 2px;
+  padding: 10px;
+}
+
+.logop {
+  background-color: rgb(247, 226, 194);
+  margin: 10px;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+.register-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-color: #111; /* Fondo oscuro */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* ====== FORMULARIO ====== */
+.register-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: #111;
+}
+
+/* ====== ETIQUETAS DE LOS CAMPOS ====== */
+.label {
+  display: block;
+  color: #e5b87d;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #e5b87d !important;
+  /* Forzar color */
+}
+
+/* ====== CAMPOS DE ENTRADA ====== */
+.input {
+  --color: black !important;
+  /* Hace que el texto ingresado sea negro */
+  --background: white;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --border-radius: 10px;
+  --placeholder-color: gray;
+  margin-bottom: 15px;
+  height: 45px;
+}
+
+.logop {
+  max-width: 80px;
+  /* Tamaño máximo */
+  height: auto;
+  /* Mantiene la proporción */
+  background-color: rgb(247, 226, 194);
+  margin-left: auto;
+  /* Empuja la imagen hacia la derecha */
+  margin-right: 10px;
+  border-radius: 30px;
+  padding: 5px;
+  object-fit: contain;
+  /* Asegura que la imagen no se deforme */
+}
+
+
+/* ====== BOTÓN DE REGISTRO ====== */
+.register-button {
+  width: 100%;
+  background: linear-gradient(to right, #d4a256, #e5b87d);
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.register-button:hover {
+  background: linear-gradient(to right, #e5b87d, #d4a256);
+  transform: scale(1.05);
+}
+
+/* ====== ENLACE DE INICIO DE SESIÓN ====== */
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #e5b87d;
+}
+
+.login-link a {
+  color: #e5b87d;
+  font-weight: bold;
+  text-decoration: none;
+}
