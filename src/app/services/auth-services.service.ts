@@ -12,9 +12,8 @@ export class AuthServicesService {
 
   constructor(private http:HttpClient) { }
 
-  Login():Observable<any>{
-
-    return this.http.get(`${this.URL_BACKEND}/api/auth`);// modificarlo para que sea body
+  Login(data:any):Observable<any>{
+    return this.http.post(`${this.URL_BACKEND}/api/auth/login`, data);
 
   }
 

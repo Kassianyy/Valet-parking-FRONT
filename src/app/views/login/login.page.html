@@ -12,22 +12,31 @@
   <div class="login-form">
     <!-- Correo electrónico -->
     <ion-label class="label">Correo electrónico o usuario</ion-label>
-    <ion-input class="input" type="email"
+    <ion-input class="input" type="email" [(ngModel)]="loginData.usuario"
       placeholder="Sarah@example.com/pepito"></ion-input>
 
     <!-- Contraseña -->
     <ion-label class="label">Contraseña</ion-label>
-    <ion-input class="input" type="password" placeholder="********"></ion-input>
+    <ion-input class="input" type="password" placeholder="********"
+    [(ngModel)]="loginData.password"></ion-input>
 
     <!-- Enlace para recuperar contraseña -->
     <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
 
     <!-- Botón de iniciar sesión -->
-    <button class="login-button">INICIAR SESIÓN</button>
+    <button class="login-button" (click)="login()">INICIAR SESIÓN</button>
 
     <!-- Enlace para registro -->
     <div class="register-link">
       <span>¿No tienes cuenta? <a href="signup">Regístrate</a></span>
     </div>
   </div>
+
+  <ion-loading
+  [isOpen]="isLoading"
+  (ionLoadingDidDismiss)="isLoading = false"
+  message="Cargando..."
+  spinner="crescent"
+></ion-loading>
+
 </ion-content>

@@ -10,7 +10,7 @@ import { RegisterModalComponent } from 'src/app/components/register-modal/regist
   templateUrl: './sign-up.page.html',
   styleUrls: ['./sign-up.page.scss'],
   standalone: true,
-  imports: [IonTitle, IonButtons, IonToolbar, IonImg, IonInput, IonLabel, IonContent, IonHeader, CommonModule, FormsModule,IonMenuButton]
+  imports: [IonButtons, IonImg, IonInput, IonLabel, IonContent, IonHeader, CommonModule, FormsModule, IonMenuButton]
 })
 export class SignUpPage implements OnInit {
 
