@@ -73,17 +73,13 @@ h1 {
 
 .logop {
   max-width: 80px;
-  /* Tamaño máximo */
   height: auto;
-  /* Mantiene la proporción */
   background-color: rgb(247, 226, 194);
   margin-left: auto;
-  /* Empuja la imagen hacia la derecha */
   margin-right: 10px;
   border-radius: 30px;
   padding: 5px;
   object-fit: contain;
-  /* Asegura que la imagen no se deforme */
 }
 
 

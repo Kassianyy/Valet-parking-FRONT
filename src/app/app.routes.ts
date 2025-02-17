@@ -22,5 +22,9 @@ export const routes: Routes = [
   {
     path: 'waiting',
     loadComponent: () => import('./views/waiting/waiting.page').then( m => m.WaitingPage)
+  },  {
+    path: 'reg-vehiculo',
+    loadComponent: () => import('./views/reg-vehiculo/reg-vehiculo.page').then( m => m.RegVehiculoPage)
   },
+
 ];
