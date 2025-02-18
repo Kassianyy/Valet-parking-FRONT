@@ -1,20 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton, IonImg } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton, IonImg, IonBackButton, IonButton, IonIcon, IonInput, IonLabel, IonItem, IonList } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-reg-vehiculo',
   templateUrl: './reg-vehiculo.page.html',
   styleUrls: ['./reg-vehiculo.page.scss'],
   standalone: true,
-  imports: [IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonMenuButton, IonImg]
+  imports: [IonList, IonItem, IonLabel, IonInput, IonIcon, IonButton, IonBackButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonMenuButton, IonImg]
 })
-export class RegVehiculoPage implements OnInit {
+export class RegVehiculoPage {
+  searchText: string = '';
+  brands: string[] = ['Toyota', 'Honda', 'Ford', 'Chevrolet', 'Nissan', 'Mazda', 'Hyundai', 'Kia', 'Volkswagen', 'BMW'];
+  filteredBrands: string[] = [];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  filterBrands() {
+    if (this.searchText.trim() === '') {
+      this.filteredBrands = [];
+    } else {
+      this.filteredBrands = this.brands.filter(brand =>
+        brand.toLowerCase().includes(this.searchText.toLowerCase())
+      );
+    }
   }
 
+  selectBrand(brand: string) {
+    this.searchText = brand;
+    this.filteredBrands = [];
+  }
 }

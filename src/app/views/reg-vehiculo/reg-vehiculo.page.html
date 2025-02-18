@@ -1,16 +1,40 @@
 <ion-header class="custom-header">
-  <ion-buttons  slot="start">
+  <ion-buttons slot="start">
     <ion-menu-button class="buttonColor"></ion-menu-button>
   </ion-buttons>
-  <h1>BIENVENIDO</h1>
-  <ion-img class="logop" src="/assets/icon/logo.png.png"
-    alt="logo empresa"></ion-img>
+  <h1 class="titulos">Registro Vehículo</h1>
+  <ion-img class="logop" src="/assets/icon/logo.png.png" alt="logo empresa"></ion-img>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">regVehiculo</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="registro-container">
+  <div class="formulario">
+    <!-- Cuadro para la foto -->
+    <div class="photo-preview"></div>
+    <button class="camera-button">
+      <ion-icon name="camera-outline"></ion-icon> Tomar Foto
+    </button>
+
+    <!-- Formulario de datos -->
+    <h2 class="titulos">Datos del Vehículo</h2>
+
+    <!-- Placa -->
+    <ion-label class="label">Placa</ion-label>
+    <ion-input class="input" type="text" placeholder="Ingrese la placa"></ion-input>
+
+    <!-- Marca con búsqueda -->
+    <ion-label class="label">Marca</ion-label>
+    <ion-input class="input" type="text" [(ngModel)]="searchText" placeholder="Ingrese la marca" (ionInput)="filterBrands()"></ion-input>
+    <ion-list *ngIf="filteredBrands.length > 0" class="dropdown-list">
+      <ion-item *ngFor="let brand of filteredBrands" (click)="selectBrand(brand)">
+        {{ brand }}
+      </ion-item>
+    </ion-list>
+
+    <!-- Consecutivo -->
+    <ion-label class="label">Consecutivo</ion-label>
+    <ion-input class="input" type="text" placeholder="Ingrese el consecutivo"></ion-input>
+
+    <!-- Botón de Guardar -->
+    <button class="save-button">Guardar</button>
+  </div>
 </ion-content>
