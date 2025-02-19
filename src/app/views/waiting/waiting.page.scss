@@ -1,0 +1,83 @@
+.custom-header {
+    background: #e5b87d;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 130px;
+
+}
+.logop {
+    max-width: 80px;
+    height: auto;
+    background-color: rgb(247, 226, 194);
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 30px;
+    padding: 5px;
+    object-fit: contain;
+  }
+
+  .contenido{
+    margin: 10px;
+    border-radius: 5px;
+  }
+ 
+  
+  /* ====== Ítems ====== */
+  .custom-item {
+    background: white;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .custom-avatar img {
+    border-radius: 50%;
+    border: 2px solid #e5b87d;
+  }
+  
+  /* ====== Información del Vehículo ====== */
+  .info-label {
+  
+    text-align: left;
+    font-size: 16px;
+    
+  }
+  
+  .info-label p {
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .socio {
+    
+    color: white;
+    padding: 3px 8px;
+    border-radius: 10px;
+  }
+  
+  .invitado {
+    background: #FF5722;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 10px;
+  }
+  
+  /* ====== Botón de Ver ====== */
+  .ver-button {
+    --border-radius: 10px;
+    --color: #e5b87d;
+    --border-color: #e5b87d;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .ver-button:hover {
+    background: #e5b87d;
+    color: white;
+  }
+  

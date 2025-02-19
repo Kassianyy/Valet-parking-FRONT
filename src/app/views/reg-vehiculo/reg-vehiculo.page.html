@@ -34,6 +34,17 @@
     <ion-label class="label">Consecutivo</ion-label>
     <ion-input class="input" type="text" placeholder="Ingrese el consecutivo"></ion-input>
 
+    <div class="select-container">
+      <label class="label">Socio o Invitado</label>
+      <ion-item>
+        <ion-select [(ngModel)]="tipoUsuario" placeholder="Seleccione una opción">
+          <ion-select-option value="socio">Socio</ion-select-option>
+          <ion-select-option value="invitado">Invitado</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+    
+
     <!-- Botón de Guardar -->
     <button class="save-button">Guardar</button>
   </div>

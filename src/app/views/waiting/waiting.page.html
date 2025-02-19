@@ -1,13 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>waiting</ion-title>
-  </ion-toolbar>
+<ion-header class="custom-header">
+  <ion-buttons  slot="start">
+    <ion-menu-button class="buttonColor"></ion-menu-button>
+  </ion-buttons>
+  <h1>Espera Parking</h1>
+  <ion-img class="logop" src="/assets/icon/logo.png.png"
+    alt="logo empresa"></ion-img>
 </ion-header>
+<ion-content>
+  <ion-list class="contenido">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">waiting</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-item class="custom-item">
+      <ion-avatar slot="start" class="custom-avatar">
+        <img alt="Avatar" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+
+      <ion-label class="info-label">
+        <p><strong>Placa:</strong> <span class="socio">HKL-123</span></p> 
+        <p><strong>Modelo:</strong> <span class="socio">Mazda</span></p> 
+        <p><strong>Tipo:</strong> <span class="socio">Socio</span></p> 
+      </ion-label>
+
+      <ion-button fill="outline" slot="end" class="ver-button">
+        
+      </ion-button>
+    </ion-item>
+
+  </ion-list>
 </ion-content>
