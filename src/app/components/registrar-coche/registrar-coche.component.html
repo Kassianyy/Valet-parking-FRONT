@@ -1,0 +1,32 @@
+<ion-header class="custom-modal-header">
+  <ion-toolbar>
+    <ion-title>Registro Exitoso</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding custom-modal-content">
+  <!-- Ícono de éxito -->
+  <div class="modal-icon-container">
+    <ion-icon name="car-outline" class="success-icon"></ion-icon>
+  </div>
+
+  <h2 class="modal-title">¡Vehículo Registrado!</h2>
+  <p class="modal-text">Tu vehículo ha sido registrado con éxito.</p>
+
+  <!-- Información del vehículo -->
+  <div class="modal-info">
+    <p><strong>Placa:</strong> {{ vehiculoData.placa }}</p>
+    <p><strong>Marca:</strong> {{ vehiculoData.marca }}</p>
+    <p><strong>Color:</strong> {{ vehiculoData.color }}</p>
+    <p><strong>Tipo:</strong> {{ vehiculoData.tipoUsuario }}</p>
+  </div>
+
+  <!-- Botón de aceptar -->
+  <ion-button expand="full" fill="clear" class="custom-button"
+    (click)="closeModal()">Aceptar</ion-button>
+</ion-content>

@@ -1,29 +1,34 @@
 <ion-header class="custom-header">
-  <ion-buttons  slot="start">
+  <ion-buttons slot="start">
     <ion-menu-button class="buttonColor"></ion-menu-button>
   </ion-buttons>
   <h1>Espera Parking</h1>
-  <ion-img class="logop" src="/assets/icon/logo.png.png"
-    alt="logo empresa"></ion-img>
+  <ion-img class="logop" src="/assets/icon/logo.png.png" alt="logo empresa"></ion-img>
 </ion-header>
-<ion-content>
-  <ion-list class="contenido">
 
-    <ion-item class="custom-item">
+<ion-content>
+
+  <!-- Componente de refresco -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list class="contenido">
+    <ion-item class="custom-item" *ngFor="let vehiculo of vehiculos">
       <ion-avatar slot="start" class="custom-avatar">
-        <img alt="Avatar" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        <img [src]="vehiculo.imagenUrl" alt="Imagen del vehículo" />
       </ion-avatar>
 
       <ion-label class="info-label">
-        <p><strong>Placa:</strong> <span class="socio">HKL-123</span></p> 
-        <p><strong>Modelo:</strong> <span class="socio">Mazda</span></p> 
-        <p><strong>Tipo:</strong> <span class="socio">Socio</span></p> 
+        <p><strong>Placa:</strong> <span class="socio">{{ vehiculo.placa }}</span></p> 
+        <p><strong>Modelo:</strong> <span class="socio">{{ vehiculo.marca }}</span></p> 
+        <p><strong>Tipo:</strong> <span class="socio">{{ vehiculo.tipo_usuario }}</span></p> 
       </ion-label>
 
       <ion-button fill="outline" slot="end" class="ver-button">
-        
+        Ver
       </ion-button>
     </ion-item>
-
   </ion-list>
+
 </ion-content>

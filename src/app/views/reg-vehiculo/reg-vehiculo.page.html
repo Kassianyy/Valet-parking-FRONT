@@ -3,49 +3,64 @@
     <ion-menu-button class="buttonColor"></ion-menu-button>
   </ion-buttons>
   <h1 class="titulos">Registro Vehículo</h1>
-  <ion-img class="logop" src="/assets/icon/logo.png.png" alt="logo empresa"></ion-img>
+  <ion-img class="logop" src="/assets/icon/logo.png.png"
+    alt="logo empresa"></ion-img>
 </ion-header>
 
 <ion-content class="registro-container">
   <div class="formulario">
-    <!-- Cuadro para la foto -->
-    <div class="photo-preview"></div>
-    <button class="camera-button">
+
+    <!-- Previsualización de la foto -->
+    <div class="photo-preview">
+      <img *ngIf="fotoPreview" [src]="fotoPreview" class="preview-image"
+        alt="Foto del vehículo">
+    </div>
+
+    <!-- Botón para tomar foto -->
+    <button class="camera-button" (click)="tomarFoto()">
       <ion-icon name="camera-outline"></ion-icon> Tomar Foto
     </button>
 
-    <!-- Formulario de datos -->
     <h2 class="titulos">Datos del Vehículo</h2>
 
     <!-- Placa -->
     <ion-label class="label">Placa</ion-label>
-    <ion-input class="input" type="text" placeholder="Ingrese la placa"></ion-input>
+    <ion-input class="input" type="text"
+      placeholder="Ingrese la placa"[(ngModel)]="formData.placa" ></ion-input>
 
     <!-- Marca con búsqueda -->
     <ion-label class="label">Marca</ion-label>
-    <ion-input class="input" type="text" [(ngModel)]="searchText" placeholder="Ingrese la marca" (ionInput)="filterBrands()"></ion-input>
+    <ion-input class="input" type="text" [(ngModel)]="formData.marca" [(ngModel)]="searchText"
+      placeholder="Ingrese la marca" (ionInput)="filterBrands()"></ion-input>
     <ion-list *ngIf="filteredBrands.length > 0" class="dropdown-list">
-      <ion-item *ngFor="let brand of filteredBrands" (click)="selectBrand(brand)">
+      <ion-item *ngFor="let brand of filteredBrands"
+        (click)="selectBrand(brand)">
         {{ brand }}
       </ion-item>
     </ion-list>
 
+    <ion-label class="label">Color</ion-label>
+    <ion-input class="input" type="text" [(ngModel)]="formData.color"
+      placeholder="Ingrese el color"></ion-input>
+
     <!-- Consecutivo -->
     <ion-label class="label">Consecutivo</ion-label>
-    <ion-input class="input" type="text" placeholder="Ingrese el consecutivo"></ion-input>
+    <ion-input class="input" type="text"
+      placeholder="Ingrese el consecutivo" [(ngModel)]="formData.consecutivo"></ion-input>
 
+    <!-- Socio o Invitado -->
     <div class="select-container">
       <label class="label">Socio o Invitado</label>
       <ion-item>
-        <ion-select [(ngModel)]="tipoUsuario" placeholder="Seleccione una opción">
+        <ion-select [(ngModel)]="formData.tipoUsuario"
+          placeholder="Seleccione una opción">
           <ion-select-option value="socio">Socio</ion-select-option>
           <ion-select-option value="invitado">Invitado</ion-select-option>
         </ion-select>
       </ion-item>
     </div>
-    
 
     <!-- Botón de Guardar -->
-    <button class="save-button">Guardar</button>
+    <button class="save-button" (click)="guardarVehiculo()">Guardar</button>
   </div>
 </ion-content>

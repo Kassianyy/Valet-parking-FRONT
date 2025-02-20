@@ -1,0 +1,78 @@
+/* ====== HEADER DEL MODAL ====== */
+.custom-modal-header {
+    background: #e5b87d;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: black;
+}
+
+/* ====== CONTENIDO DEL MODAL ====== */
+.custom-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #111;
+    /* Fondo oscuro */
+    color: #e5b87d;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* ====== ÍCONO DEL VEHÍCULO ====== */
+.modal-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.success-icon {
+    font-size: 80px;
+    color: #f0ad4e;
+    /* Amarillo anaranjado similar al otro diseño */
+}
+
+/* ====== TÍTULO Y TEXTO DEL MODAL ====== */
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* ====== INFORMACIÓN DEL VEHÍCULO ====== */
+.modal-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.modal-info p {
+    margin: 5px 0;
+}
+
+/* ====== BOTÓN DEL MODAL ====== */
+.custom-button {
+    width: 100%;
+    background: linear-gradient(to right, #d4a256, #e5b87d);
+    color: black;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.custom-button:hover {
+    background: linear-gradient(to right, #e5b87d, #d4a256);
+    transform: scale(1.05);
+}

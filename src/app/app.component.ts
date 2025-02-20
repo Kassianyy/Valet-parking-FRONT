@@ -15,7 +15,7 @@ import { logOut, cashOutline, cashSharp, clipboardOutline, clipboardSharp, timeO
 })
 export class AppComponent {
   public appPages = [
-    { title: 'login', url: 'login', icon: 'person-circle' },
+    { title: 'listado de Coches', url: 'waiting', icon: 'person-circle' },
     { title: 'Perfil', url: '/folder/inbox', icon: 'person-circle' },
     { title: 'Perfiles', url: '/folder/outbox', icon: 'people-circle' },
     { title: 'Top', url: '/folder/favorites', icon: 'trophy' },
