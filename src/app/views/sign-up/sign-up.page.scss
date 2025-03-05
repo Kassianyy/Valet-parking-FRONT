@@ -1,7 +1,6 @@
 /* ====== ESTILOS DEL HEADER ====== */
 .custom-header {
   background: #e5b87d;
-  border-bottom-right-radius: 80px;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -34,7 +33,6 @@ h1 {
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   height: 100vh; /* Ocupa toda la altura de la pantalla */
-  background-color: #111; /* Fondo oscuro */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -45,7 +43,7 @@ h1 {
   width: 100%;
   max-width: 400px;
   padding: 30px;
-  background: #111;
+  background-color: darkgray;
 }
 
 /* ====== ETIQUETAS DE LOS CAMPOS ====== */

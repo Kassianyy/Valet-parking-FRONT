@@ -1,14 +1,3 @@
-/* ====== ESTILOS DEL HEADER ====== */
-.custom-header {
-  background: #e5b87d;
-  border-bottom-right-radius: 80px;
-  /* Esquina redondeada más pronunciada */
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  height: 160px;
-}
-
 .logop {
   max-width: 80px;
   /* Tamaño máximo */
@@ -47,12 +36,10 @@ h1 {
 
 .custom-header {
   background: #e5b87d;
-  border-bottom-right-radius: 80px;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Distribuye el espacio */
   height: 160px;
 }
 
@@ -63,8 +50,6 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: #111;
-  /* Fondo oscuro */
   padding-top: 20px;
 }
 
@@ -73,7 +58,7 @@ h1 {
   width: 100%;
   max-width: 400px;
   padding: 30px;
-  background: #111;
+  background-color: darkgray;
 }
 
 /* ====== ETIQUETAS DE LOS CAMPOS ====== */
