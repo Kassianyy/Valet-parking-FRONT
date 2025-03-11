@@ -1,14 +1,12 @@
-/* ====== comienzo del contenido del header   ====== */
 .custom-header {
-    background: #e5b87d;
+    background: #e6c170;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 130px;
-
-}
-.logop {
+  }
+  .logop {
     max-width: 80px;
     height: auto;
     background-color: rgb(247, 226, 194);
@@ -18,25 +16,115 @@
     padding: 5px;
     object-fit: contain;
   }
-/* ====== finalizacion  del contenido del header   ====== */
-
-/* ====== contenido ====== */
-  .contenido{
+  
+  // Contenedor principal y barra superior
+  .contenidoDatos {
     background-color: #e6c170;
     border-radius: 30px 30px 30px 30px;
-    padding: 15px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     position: relative;
     margin-top: 10px;
   }
+  
+  // Contenedor del avatar
+  .fotoDatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    
+  }
+  .nombreUsuario{
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+  }
+  .rol {
+    color: rgb(14, 14, 14);
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  // Sección de contraseña
+  .password-section {
+    background-color: #e6c170;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 15px;
+    color: #333;
+  }
 
-  /* ====== contenidoPrincipal ====== */
+  ion-input {
+    --background: white;
+    --color: #333;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    --padding-top: 12px;
+    --padding-bottom: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  .edit-button {
+    --background: white;
+    --color: #333;
+    --border-radius: 20px;
+    --box-shadow: none;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  // Sección del historial
+  .history-section {
+    background-color: #e6c170;
+    border-radius: 30px 30px 30px 30px;
+    padding: 20px;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+   
+  }
+  
+  .history-header h2 {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .see-all {
+    --color: #fafafa;
+    font-size: 14px;
+    --padding-start: 0;
+    --padding-end: 0;
+    margin: 0;
+  }
+  /* ====== contenidoPrincipalhistoria ====== */
   .contenidoPrincipal {
     border: 2px solid #000000;
     margin: 5px;
     border-radius: 20px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   }
-  
   /* ====== Información del Vehículo ====== */
   .info-label {
   

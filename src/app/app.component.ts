@@ -15,12 +15,12 @@ import { logOut, cashOutline, cashSharp, clipboardOutline, clipboardSharp, timeO
 })
 export class AppComponent {
   public appPages = [
-    { title: 'listado de Coches', url: 'waiting', icon: 'person-circle' },
-    { title: 'Perfil', url: '/folder/inbox', icon: 'person-circle' },
-    { title: 'Perfiles', url: '/folder/outbox', icon: 'people-circle' },
+    
+    { title: 'Perfil', url: 'perfil', icon: 'person-circle' },
+    { title: 'Perfiles', url: 'perfiles', icon: 'people-circle' },
     { title: 'Top', url: '/folder/favorites', icon: 'trophy' },
-    { title: 'Espera', url: '/folder/archived', icon: 'time' },
-    { title: 'Registro', url: '/folder/trash', icon: 'clipboard' },
+    { title: 'Espera', url: 'waiting', icon: 'time' },
+    { title: 'Registro', url: 'reg-vehiculo', icon: 'clipboard' },
     { title: 'Facturas', url: '/folder/spam', icon: 'cash' },
   ];
   constructor(private router: Router, private storage: Storage) {

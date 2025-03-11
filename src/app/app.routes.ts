@@ -30,4 +30,17 @@ export const routes: Routes = [
     loadComponent: () => import('./views/reg-vehiculo/reg-vehiculo.page').then( m => m.RegVehiculoPage),
     canActivate: [AuthGuard]
   },
+  {
+    path: 'perfil',
+    loadComponent: () => import('./views/perfil/perfil.page').then( m => m.PerfilPage),
+    canActivate: [AuthGuard]
+  },  {
+    path: 'perfil',
+    loadComponent: () => import('./views/perfil/perfil.page').then( m => m.PerfilPage)
+  },
+  {
+    path: 'perfiles',
+    loadComponent: () => import('./views/perfiles/perfiles.page').then( m => m.PerfilesPage)
+  },
+
 ];

@@ -7,28 +7,28 @@
 </ion-header>
 
 <ion-content>
-
   <!-- Componente de refresco -->
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-list class="contenido">
-    <ion-item class="custom-item" *ngFor="let vehiculo of vehiculos">
-      <ion-avatar slot="start" class="custom-avatar">
-        <img [src]="vehiculo.imagenUrl" alt="Imagen del vehículo" />
-      </ion-avatar>
+  <!-- Contenido -->
+    <ion-list class="contenido">
+      <ion-item class="contenidoPrincipal" *ngFor="let vehiculo of vehiculos">
+        <ion-avatar slot="start" class="custom-avatar">
+          <img [src]="vehiculo.imagenUrl" alt="Imagen del vehículo" />
+        </ion-avatar>
 
-      <ion-label class="info-label">
-        <p><strong class="socio">Placa:</strong> <span class="socio">{{ vehiculo.placa }}</span></p> 
-        <p><strong class="socio">Modelo:</strong> <span class="socio">{{ vehiculo.marca }}</span></p> 
-        <p><strong class="socio">Tipo:</strong> <span class="socio">{{ vehiculo.tipo_usuario }}</span></p> 
-      </ion-label>
+        <ion-label class="info-label">
+          <p><strong class="socio">Placa:</strong> <span class="socio">{{ vehiculo.placa }}</span></p> 
+          <p><strong class="socio">Modelo:</strong> <span class="socio">{{ vehiculo.marca }}</span></p> 
+          <p><strong class="socio">Tipo:</strong> <span class="socio">{{ vehiculo.tipo_usuario }}</span></p> 
+        </ion-label>
 
-      <ion-button fill="outline" slot="end" class="ver-button">
-        Ver
-      </ion-button>
-    </ion-item>
-  </ion-list>
-
+        <ion-button fill="outline" slot="end" class="ver-button">
+          Ver
+        </ion-button>
+      </ion-item>
+    </ion-list>
+    
 </ion-content>

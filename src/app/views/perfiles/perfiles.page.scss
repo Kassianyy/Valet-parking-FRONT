@@ -1,0 +1,18 @@
+.custom-header {
+    background: #ff514b;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 130px;
+  }
+  .logop {
+    max-width: 80px;
+    height: auto;
+    background-color: rgb(247, 226, 194);
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 30px;
+    padding: 5px;
+    object-fit: contain;
+  }
